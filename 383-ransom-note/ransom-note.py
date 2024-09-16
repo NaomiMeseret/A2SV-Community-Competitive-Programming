@@ -1,13 +1,9 @@
-class Solution(object):
-    def canConstruct(self, ransomNote, magazine):
-        count = {}
-        for char in magazine:
-            count[char] = count.get(char, 0) + 1
-        
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        ransomCount=Counter(ransomNote)
+        magazineCount=Counter(magazine)
         for char in ransomNote:
-            if count.get(char, 0) == 0:
+            if ransomCount[char]>magazineCount.get(char,0):
                 return False
-            count[char] -= 1
-        
         return True
         
