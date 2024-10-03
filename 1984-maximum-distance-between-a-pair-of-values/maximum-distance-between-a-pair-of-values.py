@@ -9,7 +9,6 @@ class Solution:
                 right+=1
             else:
                 left+=1
-                right+=1
         return maxDistance
 
 
