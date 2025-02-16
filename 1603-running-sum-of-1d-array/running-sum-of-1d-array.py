@@ -1,11 +1,10 @@
 class Solution(object):
     def runningSum(self, nums):
-        start=0
+        s=0
         for i in range(len(nums)):
-            start+=nums[i]
-            nums[i]=start
+            s+=nums[i]
+            nums[i]=s
         return nums
-
 
         
         
