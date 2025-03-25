@@ -9,10 +9,8 @@ class Solution:
                 if nums[mid]<target:
                     l=mid+1
                 else:
-                    if nums[mid]==target:
-                        first=mid
                     r=mid-1
-            return first
+            return l if l<len(nums) and nums[l]==target else -1
         def lastPostion(l,r):
             nonlocal last
             while l<=r:
@@ -20,10 +18,8 @@ class Solution:
                 if nums[mid]>target:
                     r=mid-1
                 else:
-                    if nums[mid]==target:
-                        last=mid
                     l=mid+1
-            return last
+            return r if r>=0 and nums[r]==target else -1
         ans=[firstPostion(0,len(nums)-1), lastPostion(0,len(nums)-1)]
         return ans
 
