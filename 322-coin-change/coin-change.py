@@ -12,7 +12,7 @@ class Solution:
             for c in coins:
                 ans = min(ans , 1+dp(x-c))
             memo[x] =ans
-            return ans
+            return memo[x]
         res = dp(amount)
         return res if res!=float("inf") else -1
         
