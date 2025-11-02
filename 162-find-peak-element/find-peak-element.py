@@ -6,6 +6,7 @@ class Solution:
         while l<r:
             mid = (l+r)//2
             if nums[mid]>nums[mid+1]:
+                target = mid
                 r= mid
             else:
                 l = mid+1
