@@ -25,7 +25,7 @@ class Solution:
                     q.append(node.left)
                 if node.right:
                     q.append(node.right)
-            node.next = None
+            prev.next = None
         return root
             
         
